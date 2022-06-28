@@ -1,4 +1,5 @@
 import React from "react";
+import autoBindReact from "auto-bind/react";
 import { getInitialData } from "../utils";
 import NotesHeader from "./NotesHeader";
 import NotesBody from "./NotesBody";
@@ -6,16 +7,12 @@ import NotesBody from "./NotesBody";
 class NotesApp extends React.Component {
   constructor(props) {
     super(props);
+    autoBindReact(this);
 
     this.state = {
       notes: getInitialData(),
       query: "",
     };
-
-    this.onAddNotesHandler = this.onAddNotesHandler.bind(this);
-    this.onDeleteNotesHandler = this.onDeleteNotesHandler.bind(this);
-    this.onSearchNotesHandler = this.onSearchNotesHandler.bind(this);
-    this.onArchivedNotesHandler = this.onArchivedNotesHandler.bind(this);
   }
 
   onAddNotesHandler({ title, body }) {
