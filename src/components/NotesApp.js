@@ -1,6 +1,5 @@
 import React from "react";
 import autoBindReact from "auto-bind/react";
-import { getInitialData } from "../utils";
 import NotesHeader from "./NotesHeader";
 import NotesBody from "./NotesBody";
 
@@ -10,7 +9,7 @@ class NotesApp extends React.Component {
     autoBindReact(this);
 
     this.state = {
-      notes: getInitialData(),
+      notes: [],
       query: "",
     };
   }

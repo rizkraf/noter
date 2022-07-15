@@ -24,7 +24,7 @@ function NotesList({ notes, onDelete, onArchive, query }) {
     <>
       <section id="unarchivedNotes" className="mb-10">
         <h2 className="mb-3 text-3xl font-bold">Catatan</h2>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {unarchivedNotes.length > 0 ? (
             unarchivedNotes.map((note) => (
               <NotesItem
@@ -43,7 +43,7 @@ function NotesList({ notes, onDelete, onArchive, query }) {
 
       <section id="archivedNotes">
         <h2 className="mb-3 text-3xl font-bold">Arsip</h2>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {archivedNotes.length > 0 ? (
             archivedNotes.map((note) => (
               <NotesItem
